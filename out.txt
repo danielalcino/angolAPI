@@ -1,0 +1,6 @@
+14
+21
+8
+Erro: Divisão por zero
+Erro: Divisão por zero
+Erro: Caracteres inválidos

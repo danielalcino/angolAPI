@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Provincias de Angola</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #e9ecef;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #0077b6;
+      padding: 1em;
+      text-align: center;
+      color: white;
+    }
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      padding: 30px;
+    }
+    h2 {
+      color: #0077b6;
+      text-align: center;
+    }
+    table {
+      margin: auto;
+      width: 80%;
+      border-collapse: collapse;
+      background: white;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: left;
+    }
+    th {
+      background-color: #0077b6;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AngolAPI</h1>
+    <nav>
+      <a href="/">Início</a>
+      <a href="/provincias">Provincias</a>
+      <a href="/docs">Documentação</a>
+    </nav>
+  </header>
+  <main>
+    <h2>📍 Lista de Provincias de Angola</h2>
+    <table>
+      <tr>
+        <th>Nome</th>
+        <th>Capital</th>
+        <th>Coordendas</th>
+      </tr>
+      {% for provincia in provincias %}
+      <tr>
+        <td>{{ provincia.nome }}</td>
+        <td>{{ provincia.capital }}</td>
+        <td> {{ provincia.latitude }}
+         {{ provincia.longitude }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </main>
+</body>
+</html>

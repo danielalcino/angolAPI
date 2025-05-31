@@ -1,4 +1,6 @@
 fastapi
 uvicorn
 pydantic
+jinja2
+requests
 
